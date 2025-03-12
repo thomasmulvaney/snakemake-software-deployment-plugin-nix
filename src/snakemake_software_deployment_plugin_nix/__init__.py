@@ -1,3 +1,4 @@
+__authors__ = "Thomas Mulvaney, Quentin Guilloteau"
 from typing import Iterable, Optional
 import subprocess as sp
 from snakemake_interface_software_deployment_plugins import (

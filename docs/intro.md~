@@ -1,0 +1,21 @@
+# Snakemake Software Deployment Plugin Nix
+
+## Example Snakmake file
+
+```snakemake
+
+rule frobnicate:
+   input="data.txt"
+   output"frobnicated_data.txt"
+   nix:
+     flakefile="nix/frobnicate/flake.nix"
+   shell="frobicate {input} {output}"
+   
+rule tweaker:
+   input="data.txt"
+   output"tweaked_data.txt"
+   nix:
+     flakefile="nix/tweaker/flake.nix"
+   shell="tweaker {input} {output}"
+
+```
