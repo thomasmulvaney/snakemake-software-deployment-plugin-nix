@@ -12,14 +12,13 @@ from snakemake_interface_software_deployment_plugins.settings import (
 
 from snakemake_software_deployment_plugin_nix import Env, EnvSpec, EnvSpecBase
 
+
 class TestSoftwareDeployment(TestSoftwareDeploymentBase):
     __test__ = True  # activate automatic testing
 
     def get_env_spec(self) -> EnvSpecBase:
         # Our nix flake is defined in `./test/nix`.
-        return EnvSpec(
-            flake_dir=Path(__file__).parent / "nix"
-        )
+        return EnvSpec(flake_dir=Path(__file__).parent / "nix")
 
     def get_software_deployment_provider_settings(
         self,
